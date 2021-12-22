@@ -1,0 +1,9 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@zwfthcks/zwift-packet-monitor": "^0.4.0",
+    "ant-plus": "^0.1.24",
+    "influx": "^5.5.1",
+    "internal-ip": "^7.0.0"
+  }
+}
