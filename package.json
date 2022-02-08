@@ -31,7 +31,6 @@
     "@zwfthcks/zwift-packet-monitor": "^0.4.0",
     "cap": "^0.2.1",
     "internal-ip": "6.2.0",
-    "nest-commander": "^2.3.5",
     "nestjs-console": "^7.0.1",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
