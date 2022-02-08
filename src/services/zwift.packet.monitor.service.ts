@@ -1,21 +1,19 @@
 import { Injectable } from '@nestjs/common';
 import _ZwiftPacketMonitor from '@zwfthcks/zwift-packet-monitor';
 import Cap from 'cap';
-import InternalIp from 'internal-ip';
+import * as internalIp from 'internal-ip';
 
 @Injectable()
 export class ZwiftPacketMonitor {
-  get ip() {
-    return (async () => {
-      return await InternalIp.v4();
-    })();
+  getIp(): string {
+    return internalIp.v4.sync();
   }
 
-  get device() {
-    return Cap.findDevice(this.ip);
+  getDevice() {
+    return Cap.findDevice(this.getIp());
   }
 
-  get monitor() {
-    return new _ZwiftPacketMonitor(this.device);
+  getMonitor() {
+    return new _ZwiftPacketMonitor(this.getDevice());
   }
 }

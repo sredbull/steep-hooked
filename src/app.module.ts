@@ -1,9 +1,10 @@
 import { Module } from '@nestjs/common';
-import { AppService } from './services/app.service';
 import { ZwiftPacketMonitor } from './services/zwift.packet.monitor.service';
-import { StartCommand } from './commands/start.command';
+import { ConsoleModule } from 'nestjs-console';
+import { StartService } from './console/start.service';
 
 @Module({
-  providers: [AppService, ZwiftPacketMonitor, StartCommand],
+  imports: [ConsoleModule],
+  providers: [StartService, ZwiftPacketMonitor],
 })
 export class AppModule {}
