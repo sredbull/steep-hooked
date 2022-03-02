@@ -9,13 +9,11 @@ export class StartService {
     command: 'start',
     description: 'Start the monitor server',
   })
-  async start(): Promise<void> {
+  start(): void {
     const spin = createSpinner();
 
     spin.start('Starting monitor');
 
-    console.log(this.zwiftPacketMonitor.getMonitor());
-
-    spin.succeed('Stopped monitor');
+    this.zwiftPacketMonitor.start();
   }
 }

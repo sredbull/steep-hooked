@@ -12,12 +12,12 @@ bootstrap.init().then(async (app) => {
 
     app.close();
 
-    process.exit(0);
+    // process.exit(0);
   } catch (e) {
     console.log(e);
 
     app.close();
 
-    process.exit(1);
+    // process.exit(1);
   }
 });

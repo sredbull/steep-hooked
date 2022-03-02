@@ -5,15 +5,25 @@ import * as internalIp from 'internal-ip';
 
 @Injectable()
 export class ZwiftPacketMonitor {
-  getIp(): string {
+  get ip(): string {
     return internalIp.v4.sync();
   }
 
-  getDevice() {
-    return Cap.findDevice(this.getIp());
+  get device(): string {
+    return Cap.findDevice(this.ip);
   }
 
-  getMonitor() {
-    return new _ZwiftPacketMonitor(this.getDevice());
+  get monitor(): _ZwiftPacketMonitor {
+    return new _ZwiftPacketMonitor(this.device);
+  }
+
+  start() {
+    this.monitor.on('outgoingPlayerState', (playerState) => {
+      console.log(playerState);
+
+      console.log('hallo')
+    });
+
+    this.monitor.start();
   }
 }
