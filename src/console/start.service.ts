@@ -14,6 +14,11 @@ export class StartService {
 
     spin.start('Starting monitor');
 
-    this.zwiftPacketMonitor.start();
+    const monitor = this.zwiftPacketMonitor.monitor;
+    monitor.on('outgoingPlayerState', (playerState) => {
+      console.log(playerState);
+    });
+
+    monitor.start();
   }
 }

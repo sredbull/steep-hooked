@@ -16,14 +16,4 @@ export class ZwiftPacketMonitor {
   get monitor(): _ZwiftPacketMonitor {
     return new _ZwiftPacketMonitor(this.device);
   }
-
-  start() {
-    this.monitor.on('outgoingPlayerState', (playerState) => {
-      console.log(playerState);
-
-      console.log('hallo')
-    });
-
-    this.monitor.start();
-  }
 }
