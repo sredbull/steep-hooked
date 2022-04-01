@@ -16,7 +16,7 @@
     "console": "ts-node -r tsconfig-paths/register src/console.ts"
   },
   "dependencies": {
-    "@nestjs/common": "^8.0.0",
+    "@nestjs/common": "^8.4.3",
     "@nestjs/core": "^8.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@zwfthcks/zwift-packet-monitor": "^0.4.0",
