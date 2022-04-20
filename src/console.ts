@@ -18,6 +18,6 @@ bootstrap.init().then(async (app) => {
 
     app.close();
 
-    // process.exit(1);
+    process.exit(1);
   }
 });
