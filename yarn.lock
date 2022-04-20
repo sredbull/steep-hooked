@@ -188,15 +188,15 @@
     tslib "2.3.1"
     uuid "8.3.2"
 
-"@nestjs/core@^8.0.0":
-  version "8.2.6"
-  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-8.2.6.tgz#08eb38203fb01a828227ea25972d38bfef5c818f"
-  integrity sha512-NwPcEIMmCsucs3QaDlQvkoU1FlFM2wm/WjaqLQhkSoIEmAR1gNtBo88f5io5cpMwCo1k5xYhqGlaSl6TfngwWQ==
+"@nestjs/core@^8.4.4":
+  version "8.4.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/core/-/core-8.4.4.tgz#94fd2d63fd77791f616fbecafb79faa2235eeeff"
+  integrity sha512-Ef3yJPuzAttpNfehnGqIV5kHIL9SHptB5F4ERxoU7pT61H3xiYpZw6hSjx68cJO7cc6rm7/N+b4zeuJvFHtvBg==
   dependencies:
     "@nuxtjs/opencollective" "0.3.2"
     fast-safe-stringify "2.1.1"
     iterare "1.2.1"
-    object-hash "2.2.0"
+    object-hash "3.0.0"
     path-to-regexp "3.2.0"
     tslib "2.3.1"
     uuid "8.3.2"
@@ -645,14 +645,6 @@
   version "4.2.2"
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
-
-"@zwfthcks/zwift-packet-monitor@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@zwfthcks/zwift-packet-monitor/-/zwift-packet-monitor-0.4.0.tgz#5f07d662e0076c52e41016f0d5ace3ff73ca3f15"
-  integrity sha512-KDm77r6AkfJT39dUmcn4h79NYTT04UCDPnvuMXdl104gdEjsjb6ERAZhEjOaidtx16UhgY3gAh1dIx6YZL6Pzw==
-  dependencies:
-    cap "^0.2.1"
-    protobufjs "^6.9.0"
 
 "@zwfthcks/zwift-packet-monitor@https://github.com/jeroni7100/zwift-packet-monitor":
   version "0.6.0"
@@ -2331,10 +2323,10 @@ object-assign@^4, object-assign@^4.1.1:
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
 
-object-hash@2.2.0:
-  version "2.2.0"
-  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-2.2.0.tgz#5ad518581eefc443bd763472b8ff2e9c2c0d54a5"
-  integrity sha512-gScRMn0bS5fH+IuwyIFgnh9zBdo4DV+6GhygmWM9HyNJSgS0hScp1f5vjtm7oIIOiT9trXrShAkLFSc2IqKNgw==
+object-hash@3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/object-hash/-/object-hash-3.0.0.tgz#73f97f753e7baffc0e2cc9d6e079079744ac82e9"
+  integrity sha512-RSn9F68PjH9HqtltsSnqYC1XXoWe9Bju5+213R98cNGttag9q9yAOTzdbsqvIa7aNm5WffBZFpWYr2aWrklWAw==
 
 on-finished@^2.3.0, on-finished@~2.3.0:
   version "2.3.0"
@@ -2525,7 +2517,7 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-protobufjs@^6.11.2, protobufjs@^6.9.0:
+protobufjs@^6.11.2:
   version "6.11.2"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.2.tgz#de39fabd4ed32beaa08e9bb1e30d08544c1edf8b"
   integrity sha512-4BQJoPooKJl2G9j3XftkIXjoC9C0Av2NOrWmbLWT1vH32GcSUHjM0Arra6UfTsVyfMAuFzaLucXn1sadxJydAw==

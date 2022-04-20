@@ -17,7 +17,7 @@
   },
   "dependencies": {
     "@nestjs/common": "^8.0.0",
-    "@nestjs/core": "^8.0.0",
+    "@nestjs/core": "^8.4.4",
     "@nestjs/platform-express": "^8.0.0",
     "@zwfthcks/zwift-packet-monitor": "https://github.com/jeroni7100/zwift-packet-monitor",
     "cap": "^0.2.1",
