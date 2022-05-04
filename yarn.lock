@@ -646,14 +646,6 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@zwfthcks/zwift-packet-monitor@^0.4.0":
-  version "0.4.0"
-  resolved "https://registry.yarnpkg.com/@zwfthcks/zwift-packet-monitor/-/zwift-packet-monitor-0.4.0.tgz#5f07d662e0076c52e41016f0d5ace3ff73ca3f15"
-  integrity sha512-KDm77r6AkfJT39dUmcn4h79NYTT04UCDPnvuMXdl104gdEjsjb6ERAZhEjOaidtx16UhgY3gAh1dIx6YZL6Pzw==
-  dependencies:
-    cap "^0.2.1"
-    protobufjs "^6.9.0"
-
 "@zwfthcks/zwift-packet-monitor@https://github.com/jeroni7100/zwift-packet-monitor":
   version "0.6.0"
   resolved "https://github.com/jeroni7100/zwift-packet-monitor#1b5cb35b37831c81bd672bbcba0473e843237e98"
@@ -2525,7 +2517,7 @@ progress@^2.0.0:
   resolved "https://registry.yarnpkg.com/progress/-/progress-2.0.3.tgz#7e8cf8d8f5b8f239c1bc68beb4eb78567d572ef8"
   integrity sha512-7PiHtLll5LdnKIMw100I+8xJXR5gW2QwWYkT6iJva0bXitZKa/XMrSbdmg3r2Xnaidz9Qumd0VPaMrZlF9V9sA==
 
-protobufjs@^6.11.2, protobufjs@^6.9.0:
+protobufjs@^6.11.2:
   version "6.11.2"
   resolved "https://registry.yarnpkg.com/protobufjs/-/protobufjs-6.11.2.tgz#de39fabd4ed32beaa08e9bb1e30d08544c1edf8b"
   integrity sha512-4BQJoPooKJl2G9j3XftkIXjoC9C0Av2NOrWmbLWT1vH32GcSUHjM0Arra6UfTsVyfMAuFzaLucXn1sadxJydAw==

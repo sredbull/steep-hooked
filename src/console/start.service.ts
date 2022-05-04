@@ -20,10 +20,9 @@ export class StartService {
     const altitudePrevious = 0;
     // let slopePrevious = 0;
 
-    console.log(mSma);
-
     const monitor = this.zwiftPacketMonitor.monitor;
     monitor.on('outgoingPlayerState', (playerState) => {
+      console.log(playerState);
       if (playerState.distance > distancePrevious + 3 && nbRuns > 4) {
         let angle = Math.asin(
           (playerState.altitude - altitudePrevious) /
