@@ -13,8 +13,6 @@ export class StartService {
     const spin = createSpinner();
     spin.start('Starting monitor');
 
-    const mSma = this.zwiftPacketMonitor.simpleMovingAverager(3);
-
     let packetCount = 0;
     let distancePrevious = 0;
     let altitudePrevious = 0;
