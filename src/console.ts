@@ -11,8 +11,6 @@ bootstrap.init().then(async (app) => {
     await bootstrap.boot();
 
     app.close();
-
-    // process.exit(0);
   } catch (e) {
     console.log(e);
 
