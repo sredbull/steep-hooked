@@ -1,5 +1,6 @@
 import { ZwiftPacketMonitor } from '../services/zwift.packet.monitor.service';
 import { Console, Command, createSpinner } from 'nestjs-console';
+import { PlayerState } from '../types/zwift';
 
 @Console()
 export class StartService {
@@ -18,7 +19,8 @@ export class StartService {
     let altitudePrevious = 0;
 
     const monitor = this.zwiftPacketMonitor.monitor;
-    monitor.on('outgoingPlayerState', (playerState) => {
+
+    monitor.on('outgoingPlayerState', (playerState: PlayerState) => {
       if (packetCount == 0 || playerState.distance < distancePrevious) {
         distancePrevious = playerState.distance;
         altitudePrevious = playerState.altitude;
