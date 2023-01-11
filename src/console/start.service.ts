@@ -1,10 +1,10 @@
-import { ZwiftPacketMonitor } from '../services/zwift.packet.monitor.service';
+import { ZwiftMemoryMonitor } from '../services/zwift.memory.monitor.service';
 import { Console, Command, createSpinner } from 'nestjs-console';
 import { PlayerState } from '../types/zwift';
 
 @Console()
 export class StartService {
-  constructor(private readonly zwiftPacketMonitor: ZwiftPacketMonitor) {}
+  constructor(private readonly zwiftMemoryMonitor: ZwiftMemoryMonitor) {}
 
   @Command({
     command: 'start',
@@ -18,9 +18,9 @@ export class StartService {
     let distancePrevious = 0;
     let altitudePrevious = 0;
 
-    const monitor = this.zwiftPacketMonitor.monitor;
+    const monitor = this.zwiftMemoryMonitor.monitor;
 
-    monitor.on('outgoingPlayerState', (playerState: PlayerState) => {
+    monitor.on('data', (playerState: PlayerState) => {
       if (packetCount == 0 || playerState.distance < distancePrevious) {
         distancePrevious = playerState.distance;
         altitudePrevious = playerState.altitude;
@@ -28,18 +28,12 @@ export class StartService {
 
       if (packetCount > 4 && playerState.distance > distancePrevious + 3) {
         const angle = Math.asin(
-          (playerState.altitude - altitudePrevious) /
-            (200 * (playerState.distance - distancePrevious)),
+          (playerState.altitude - altitudePrevious) / (200 * (playerState.distance - distancePrevious)),
         );
 
-        const slopePercentage = 100 * Math.tan(angle);
+        const slopePercentage = 100 * Math.tan(angle) * 2;
 
-        spin.info(
-          'Simulating ' +
-            parseFloat(slopePercentage.toString()).toFixed(2) +
-            '% incline pckt ' +
-            packetCount,
-        );
+        spin.info('Simulating ' + parseFloat(slopePercentage.toString()).toFixed(2) + '% incline');
 
         distancePrevious = playerState.distance;
         altitudePrevious = playerState.altitude;
@@ -49,6 +43,14 @@ export class StartService {
       packetCount = packetCount + 1;
     });
 
-    monitor.start();
+    monitor.once('ready', () => {
+      try {
+        monitor.start();
+
+        spin.warn('warning: ' + monitor.lasterror);
+      } catch (e) {
+        spin.fail('error in monitor.start(): ' + monitor.lasterror);
+      }
+    });
   }
 }
